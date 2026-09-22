@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nethra G Habib | Full Stack Developer</title>
+<title>Nethra G Habib | AI Engineer — Modern Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0d0d0f;
-    --surface: #141416;
-    --surface2: #1a1a1e;
-    --border: rgba(255,255,255,0.07);
-    --accent: #e8d5b0;
-    --accent2: #c9a96e;
-    --accent3: #7eb8a4;
-    --text: #f0ece4;
-    --muted: #8a8578;
-    --light: #5a5650;
+    :root {
+    --bg: #fff8f1;
+    --surface: rgba(255,255,255,0.88);
+    --surface2: #fff0e5;
+    --border: rgba(74, 47, 63, 0.13);
+    --accent: #3b2435;
+    --accent2: #e76f51;
+    --accent3: #2a9d8f;
+    --text: #2f2430;
+    --muted: #6f626b;
+    --light: #a0959d;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--bg);
+    background: radial-gradient(circle at 88% 8%, rgba(231,111,81,.16), transparent 25%), radial-gradient(circle at 8% 65%, rgba(42,157,143,.10), transparent 23%), var(--bg);
     color: var(--text);
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
@@ -53,8 +53,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 22px 6vw;
-    background: rgba(13,13,15,0.88);
-    backdrop-filter: blur(20px);
+    background: rgba(255,248,241,0.90);
+    backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--border);
   }
 
@@ -194,10 +194,10 @@
 
   .btn-primary {
     background: var(--accent2);
-    color: #0d0d0f;
+    color: #07111f;
     border: none;
     padding: 12px 28px;
-    border-radius: 2px;
+    border-radius: 10px;
     font-family: 'DM Sans', sans-serif;
     font-weight: 600;
     font-size: 0.82rem;
@@ -214,7 +214,7 @@
     color: var(--accent);
     border: 1px solid rgba(232,213,176,0.3);
     padding: 12px 26px;
-    border-radius: 2px;
+    border-radius: 10px;
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     font-size: 0.82rem;
@@ -225,7 +225,7 @@
 
   .btn-ghost:hover { border-color: var(--accent2); background: rgba(201,169,110,0.06); }
 
-  /* HERO PHOTO */
+  /* HERO VISUAL */
   .hero-card {
     opacity: 0;
     animation: fadeUp 0.8s 0.3s ease forwards;
@@ -265,34 +265,41 @@
   .hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-top: 16px;
+    gap: 12px;
+    margin-top: 24px;
+    max-width: 700px;
     position: relative;
     z-index: 1;
   }
 
   .stat-box {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    padding: 12px 8px;
+    background: rgba(255,255,255,0.88);
+    border: 1px solid rgba(59,36,53,0.12);
+    border-radius: 12px;
+    padding: 18px 12px;
+    min-height: 92px;
     text-align: center;
+    box-shadow: 0 8px 24px rgba(59,36,53,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .stat-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--accent2);
     line-height: 1;
   }
 
   .stat-label {
-    font-size: 0.65rem;
+    font-size: 0.67rem;
     color: var(--muted);
     text-transform: uppercase;
-    letter-spacing: 1.2px;
-    margin-top: 4px;
+    letter-spacing: 1.6px;
+    margin-top: 7px;
+    font-weight: 500;
   }
 
   @keyframes fadeUp {
@@ -374,9 +381,9 @@
     display: flex;
     gap: 14px;
     align-items: flex-start;
-    background: var(--surface);
+    background: var(--surface); backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(59,36,53,0.06);
     border: 1px solid var(--border);
-    border-radius: 3px;
+    border-radius: 14px;
     padding: 14px 18px;
   }
 
@@ -392,10 +399,10 @@
   }
 
   .skill-card {
-    background: var(--surface);
+    background: var(--surface); backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(59,36,53,0.06);
     border: 1px solid var(--border);
-    border-left: 2px solid var(--accent2);
-    border-radius: 3px;
+    border-left: 3px solid var(--accent2);
+    border-radius: 14px;
     padding: 24px;
     transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
   }
@@ -403,7 +410,7 @@
   .skill-card:hover {
     transform: translateY(-4px);
     border-color: var(--accent2);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 12px 40px rgba(15,23,42,0.10);
   }
 
   .skill-icon { font-size: 1.5rem; margin-bottom: 12px; }
@@ -425,7 +432,7 @@
     border: 1px solid rgba(201,169,110,0.2);
     color: var(--accent2);
     padding: 3px 9px;
-    border-radius: 2px;
+    border-radius: 10px;
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.3px;
@@ -461,14 +468,14 @@
   }
 
   .exp-card {
-    background: var(--surface);
+    background: var(--surface); backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(59,36,53,0.06);
     border: 1px solid var(--border);
-    border-radius: 3px;
+    border-radius: 14px;
     padding: 28px;
     transition: border-color 0.3s, box-shadow 0.3s;
   }
 
-  .exp-card:hover { border-color: rgba(201,169,110,0.2); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+  .exp-card:hover { border-color: rgba(201,169,110,0.2); box-shadow: 0 8px 30px rgba(15,23,42,0.08); }
 
   .exp-header {
     display: flex;
@@ -493,7 +500,7 @@
     border: 1px solid rgba(201,169,110,0.2);
     color: var(--accent2);
     padding: 4px 12px;
-    border-radius: 2px;
+    border-radius: 10px;
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -512,9 +519,9 @@
   }
 
   .project-card {
-    background: var(--surface);
+    background: var(--surface); backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(59,36,53,0.06);
     border: 1px solid var(--border);
-    border-radius: 3px;
+    border-radius: 14px;
     padding: 28px;
     display: flex;
     flex-direction: column;
@@ -524,7 +531,7 @@
 
   .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 50px rgba(15,23,42,0.10);
     border-color: rgba(201,169,110,0.2);
   }
 
@@ -578,15 +585,15 @@
   }
 
   .edu-card {
-    background: var(--surface);
+    background: var(--surface); backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(59,36,53,0.06);
     border: 1px solid var(--border);
-    border-top: 2px solid var(--accent2);
-    border-radius: 3px;
+    border-top: 3px solid var(--accent2);
+    border-radius: 14px;
     padding: 26px;
     transition: box-shadow 0.3s;
   }
 
-  .edu-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+  .edu-card:hover { box-shadow: 0 10px 30px rgba(15,23,42,0.08); }
 
   .edu-degree {
     font-family: 'Cormorant Garamond', serif;
@@ -607,9 +614,9 @@
   }
 
   .cert-card {
-    background: var(--surface);
+    background: var(--surface); backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(59,36,53,0.06);
     border: 1px solid var(--border);
-    border-radius: 3px;
+    border-radius: 14px;
     padding: 22px;
     display: flex;
     flex-direction: column;
@@ -627,7 +634,7 @@
     background: linear-gradient(90deg, var(--accent2), var(--accent3));
   }
 
-  .cert-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.3); transform: translateY(-3px); }
+  .cert-card:hover { box-shadow: 0 10px 30px rgba(15,23,42,0.08); transform: translateY(-3px); }
 
   .cert-issuer { font-size: 0.68rem; color: var(--accent2); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
   .cert-name { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.95rem; color: var(--text); line-height: 1.4; }
@@ -641,10 +648,10 @@
   }
 
   .achieve-card {
-    background: var(--surface);
+    background: var(--surface); backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(59,36,53,0.06);
     border: 1px solid var(--border);
     border-left: 2px solid var(--accent3);
-    border-radius: 3px;
+    border-radius: 14px;
     padding: 22px;
   }
 
@@ -671,9 +678,9 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    background: var(--surface);
+    background: var(--surface); backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(59,36,53,0.06);
     border: 1px solid var(--border);
-    border-radius: 3px;
+    border-radius: 14px;
     padding: 16px 20px;
     text-decoration: none;
     color: var(--text);
@@ -681,7 +688,7 @@
     transition: border-color 0.2s, box-shadow 0.2s;
   }
 
-  .contact-link:hover { border-color: rgba(201,169,110,0.3); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+  .contact-link:hover { border-color: rgba(201,169,110,0.3); box-shadow: 0 4px 20px rgba(15,23,42,0.08); }
 
   .contact-icon { font-size: 1rem; width: 22px; text-align: center; opacity: 0.7; }
   .contact-label { color: var(--accent2); font-size: 0.68rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
@@ -695,9 +702,9 @@
   }
 
   .interest-pill {
-    background: var(--surface);
+    background: var(--surface); backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(59,36,53,0.06);
     border: 1px solid var(--border);
-    border-radius: 50px;
+    border-radius: 999px;
     padding: 8px 20px;
     font-size: 0.82rem;
     color: var(--muted);
@@ -721,13 +728,63 @@
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
-    .hero-inner, .about-grid, .contact-grid, .edu-grid, .achieve-grid { grid-template-columns: 1fr; }
+    .about-grid, .contact-grid, .edu-grid, .achieve-grid { grid-template-columns: 1fr; }
     .hero-bio { max-width: 100%; }
     .hero-name { letter-spacing: -1px; }
-    .hero-card { max-width: 300px; margin: 0 auto; }
-    .hero-card::before { display: none; }
     .nav-links { display: none; }
   }
+
+  .section-title {
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 12px;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent3));
+  }
+
+  .hero-eyebrow,
+  .section-eyebrow {
+    color: var(--accent2);
+  }
+
+  .project-card:hover,
+  .skill-card:hover,
+  .edu-card:hover,
+  .cert-card:hover,
+  .exp-card:hover {
+    border-color: rgba(231,111,81,0.32);
+  }
+
+
+  @media (max-width: 560px) {
+    .hero-stats {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+    }
+    .stat-box {
+      padding: 13px 5px;
+      min-height: 78px;
+    }
+    .stat-num {
+      font-size: 1.55rem;
+    }
+    .stat-label {
+      font-size: 0.56rem;
+      letter-spacing: 1px;
+    }
+  }
+    .stat-box {
+      padding: 14px 8px;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -754,9 +811,11 @@
         <span class="surname">Habib</span>
       </h1>
       <div class="hero-divider"></div>
-      <p class="hero-role">Software Developer · Full Stack Developer · Data Science</p>
+      <p class="hero-role">Full Stack Development · AIML · Python ·Data Science  </p>
       <p class="hero-bio">
-        Computer Science Engineering undergraduate skilled in full-stack development and scalable backend systems. Proficient in Django, FastAPI, and the MERN stack — building things that perform and last.
+        Computer Science graduate with hands-on experience in Artificial Intelligence, Machine Learning, and Python-based software development. 
+        Skilled in Full Stack Development and AIML, data preprocessing, feature engineering, model training and evaluation, Flask, Django, REST APIs, SQL. 
+        Passionate about building practical AI-powered solutions that solve real-world problems.
       </p>
       <div class="hero-ctas">
         <a href="mailto:nethrahabib33@gmail.com" class="btn-primary">Get In Touch</a>
@@ -764,24 +823,22 @@
         <a href="https://linkedin.com/in/nethrahabib" target="_blank" class="btn-ghost">LinkedIn →</a>
       </div>
     </div>
-    <div class="hero-card">
-      <div class="hero-stats">
+     <div class="hero-stats">
         <div class="stat-box">
-          <div class="stat-num">4+</div>
+          <div class="stat-num">10+</div>
           <div class="stat-label">Projects</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">4</div>
+          <div class="stat-num">3+</div>
           <div class="stat-label">Certs</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">8.99</div>
+          <div class="stat-num">9.08</div>
           <div class="stat-label">CGPA</div>
         </div>
       </div>
-    </div>
-  </div>
-</header>
+     </div>
+ </header>
 
 <hr class="divider">
 
@@ -792,7 +849,7 @@
   </div>
   <div class="about-grid">
     <div class="about-text">
-      <p>I'm a <strong>Computer Science Engineering student</strong> at Dr. Ambedkar Institute of Technology, Bangalore, graduating in 2026 with a CGPA of 8.99/10.</p>
+      <p>I'm a <strong>Computer Science Engineering student</strong> at Dr. Ambedkar Institute of Technology, Bangalore, graduated in 2026 with a CGPA of 9.08/10.</p>
       <p>My work spans full-stack web development, AI/ML systems, and cloud-deployed applications. I enjoy building products end-to-end — from backend APIs and database design to interactive frontends and ML pipelines.</p>
       <p>Whether it's building a genomic data analysis platform or a real-time finance tracker, I bring precision, curiosity, and a drive to ship things that matter.</p>
     </div>
@@ -840,50 +897,56 @@
     <div class="skill-card">
       <div class="skill-icon">🐍</div>
       <div class="skill-name">Languages</div>
-      <div class="skill-desc">Core programming in Python, C, and JavaScript for building robust applications across the stack.</div>
-      <div class="tag-row"><span class="tag">Python</span><span class="tag">C</span><span class="tag">JavaScript</span></div>
+      <div class="skill-desc">Core programming in Python, C for building robust applications across the stack.</div>
+      <div class="tag-row"><span class="tag">Python</span><span class="tag">C</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">⚙️</div>
       <div class="skill-name">Backend</div>
-      <div class="skill-desc">Building scalable APIs and server-side logic with Django, FastAPI, Node.js, and Express.js.</div>
-      <div class="tag-row"><span class="tag">Django</span><span class="tag">FastAPI</span><span class="tag">Node.js</span><span class="tag">REST API</span></div>
+      <div class="skill-desc">Building scalable APIs and server-side logic with Django, Flask, Django ORM, MVT architecture</div>
+      <div class="tag-row"><span class="tag">Django</span><span class="tag">Flask</span><span class="tag">Django ORM</span><span class="tag">REST API</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🌐</div>
       <div class="skill-name">Frontend</div>
-      <div class="skill-desc">Designing dynamic, responsive interfaces with React.js, HTML5, and CSS3.</div>
-      <div class="tag-row"><span class="tag">React.js</span><span class="tag">HTML5</span><span class="tag">CSS3</span></div>
+      <div class="skill-desc">Designing dynamic, responsive interfaces HTML5, CSS3 and JavaScript.</div>
+      <div class="tag-row"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">PHP</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🗄️</div>
       <div class="skill-name">Databases</div>
       <div class="skill-desc">Designing and optimizing relational and non-relational databases for high performance.</div>
-      <div class="tag-row"><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">PostgreSQL</span></div>
+      <div class="tag-row"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🤖</div>
+      <div class="skill-name">Data Science & AI</div>
+      <div class="skill-desc">End-to-end ML pipelines with scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Machine Learning, and PowerBI for analytics.</div>
+      <div class="tag-row"><span class="tag">Scikit-learn</span><span class="tag">Numpy</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Machine Learning</span><span class="tag">PowerBI</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🧠</div>
-      <div class="skill-name">Data & Analytics</div>
-      <div class="skill-desc">End-to-end ML pipelines with scikit-learn, Pandas, NumPy, and PowerBI for analytics.</div>
-      <div class="tag-row"><span class="tag">Scikit-learn</span><span class="tag">Numpy</span><span class="tag">Pandas</span><span class="tag">PowerBI</span></div>
+      <div class="skill-name">Deep Learning</div>
+      <div class="skill-desc">Developing neural network models for classification and prediction tasks using deep learning techniques and frameworks.</div>
+      <div class="tag-row"><span class="tag">Neural Networks</span><span class="tag">Tensorflow</span><span class="tag">CNN</span><span class="tag">Keras</span></div><span class="tag">PyTorch</span>
     </div>
     <div class="skill-card">
       <div class="skill-icon">☁️</div>
       <div class="skill-name">Cloud & Tools</div>
       <div class="skill-desc">Deploying applications on AWS, VS Code, and Render with GitHub-based version control.</div>
-      <div class="tag-row"><span class="tag tag-green">VS Code</span><span class="tag tag-green">PyCharm</span><span class="tag tag-green">Jupyter Notebook</span><span class="tag tag-green">Git</span></div>
+      <div class="tag-row"><span class="tag">VS Code</span><span class="tag">PyCharm</span><span class="tag">Jupyter Notebook</span><span class="tag">GitHub</span></div><span class="tag">Google Colab</span>
     </div>
     <div class="skill-card">
       <div class="skill-icon">📐</div>
       <div class="skill-name">Core Concepts</div>
       <div class="skill-desc">Strong foundation in DSA, OOP, SDLC, AIML, DBMS, and Computer Networks.</div>
-      <div class="tag-row"><span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">DBMS</span><span class="tag">Networking</span></div>
+      <div class="tag-row"><span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">DBMS</span><span class="tag">CLoud Computing</span><span class="tag">Computer Networks</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🤝</div>
       <div class="skill-name">Soft Skills</div>
       <div class="skill-desc">Proven leadership, communication, and teamwork through technical event coordination.</div>
-      <div class="tag-row"><span class="tag">Leadership</span><span class="tag">Communication</span><span class="tag">Problem Solving</span></div>
+      <div class="tag-row"><span class="tag">Leadership</span><span class="tag">Communication</span><span class="tag">Problem Solving</span><span class="tag">Decision Making</span></div>
     </div>
   </div>
 </section>
@@ -901,16 +964,19 @@
       <div class="exp-card">
         <div class="exp-header">
           <div>
-            <div class="exp-title">Python Full Stack Trainee</div>
-            <div class="exp-company">Palle Technology · Bangalore</div>
+            <div class="exp-title">Python Full Stack & Data Science Trainee</div>
+            <div class="exp-company">Palle Technologies · Bangalore</div>
           </div>
-          <span class="exp-date">Dec 2025 – Present</span>
+          <span class="exp-date">Jan 2026 – June 2026</span>
         </div>
         <ul class="exp-list">
           <li>Developed backend modules using Python, Django, and MySQL following the MVT architecture for scalable web applications.</li>
           <li>Built scalable REST APIs using Django and optimized MySQL database queries to improve application performance.</li>
           <li>Designed dynamic web applications by implementing Django models, views, templates, HTML, and CSS.</li>
           <li>Implemented efficient data handling and database operations using Django ORM and Python.</li>
+          <li>Performed data preprocessing, visualization, and analysis using Pandas, NumPy, Matplotlib and Power BI.</li>
+          <li>Built predictive models using Scikit-learn, applying feature engineering, model training, and performance evaluation and got above 95% accuracy</li>
+          <li>Build Image classification System with help of CNN Algorithms and Neural Networks</li>
         </ul>
       </div>
     </div>
@@ -928,7 +994,7 @@
 
     <div class="project-card">
       <div class="project-num">01</div>
-      <div class="project-period">Jul – Sep 2024</div>
+      <div class="project-period">Jul – Sep 2023</div>
       <div class="project-name">International Flower Auction</div>
       <div class="project-desc">A dynamic auction system with real-time bidding functionality. Built buyer and seller modules with an admin dashboard for monitoring auctions and user activity using PHP, MySQL, and JavaScript.</div>
       <div class="project-tech">
@@ -939,7 +1005,7 @@
 
     <div class="project-card">
       <div class="project-num">02</div>
-      <div class="project-period">Nov 2024 – Jan 2025</div>
+      <div class="project-period">Nov 2023 – Jan 2024</div>
       <div class="project-name">Personal Finance Tracker</div>
       <div class="project-desc">Full-stack MERN application for personal finance management. Implemented secure JWT authentication, interactive dashboards for financial data visualization, and RESTful APIs for tracking income and expenses.</div>
       <div class="project-tech">
@@ -954,7 +1020,7 @@
       <div class="project-name">AI Medical Recommendation System</div>
       <div class="project-desc">AI-powered backend to predict diseases based on symptoms using ML models trained on real-world datasets with 132+ features. Designed REST APIs for recommending medicines, diet plans, and precautions. Deployed on AWS.</div>
       <div class="project-tech">
-        <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Scikit-learn</span><span class="tag tag-green">AWS</span><span class="tag">NumPy</span>
+        <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Scikit-learn</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Kaggle</span><span class="tag tag-green">AWS</span><span class="tag">NumPy</span><span class="tag">Pandas</span>
       </div>
       <a href="https://github.com/nethra2003/AI-medicine-Recommendation-System-" class="project-link" target="_blank">View on GitHub →</a>
     </div>
@@ -962,12 +1028,67 @@
     <div class="project-card">
       <div class="project-num">04</div>
       <div class="project-period">May – Dec 2025</div>
-      <div class="project-name">Genomic Data Analysis Platform</div>
+      <div class="project-name">Genomic Data Analysis Platform for Pharmacogenomics</div>
       <div class="project-desc">Data-intensive platform for pharmacogenomics using ANNOVAR and VEP for genomic variant annotation. Applied XGBoost and FT-Transformer for drug-response prediction — XGBoost achieved higher precision, built with React.js, Node.js, and PostgreSQL.</div>
       <div class="project-tech">
-        <span class="tag">Python</span><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">XGBoost</span>
+        <span class="tag">Python</span><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">XGBoost</span><span class="tag">FT Transformer</span><span class="tag">VEP</span><span class="tag">ANNOVAR</span><span class="tag">PostgreSQL</span>
       </div>
-      <a href="https://github.com/nethra2003" class="project-link" target="_blank">View on GitHub →</a>
+      <a href="https://github.com/nethra2003/Genomic-Data-Analysis-Platform-for-Pharmacogenomics-" class="project-link" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">05</div>
+      <div class="project-period">Jan 2026</div>
+      <div class="project-name">AI HR Assistant Agent</div>
+      <div class="project-desc">This is an AI-powered HR Assistant that answers employee queries related to Leave policies, Salary & payroll, HR rules & procedures, Attendance & timings, Benefits & insurance, Training & developmentIt uses FastAPI backend, a modern UI frontend, and OpenAI for intelligent responses.</div>
+      <div class="project-tech">
+        <span class="tag">FastAPI</span><span class="tag">OpenAI</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span><span class="tag">Vector Store</span>
+      </div>
+      <a href="https://github.com/nethra2003/hr_assistant_agent" class="project-link" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">06</div>
+      <div class="project-period">Apr – May 2026</div>
+      <div class="project-name">BudgetNest– Personal Expense Tracking System</div>
+      <div class="project-desc"> Developed a full-stack expense management system using Django, MySQL, HTML5, CSS, Bootstrap, and JavaScript. Implemented secure user authentication and expense tracking with CRUD functionality. Added expense categorization, filtering, and reporting for actionable financial insights.</div>
+      <div class="project-tech">
+        <span class="tag">Python</span><span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span><span class="tag">JavaScript</span><span class="tag">Django MVT architecture</span><span class="tag">Django ORM</span>
+      </div>
+      <a href="https://github.com/nethra2003/BudgetNest" class="project-link" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">07</div>
+      <div class="project-period">May 2026</div>
+      <div class="project-name">Restoran - Restaurant Booking Website</div>
+      <div class="project-desc"> Restoran is a web-based restaurant booking and management application developed using Django. The project provides users with an interactive platform to explore restaurant details, navigate through different pages, and make table reservations through a responsive and user-friendly interface. The application is designed with reusable templates, organized backend architecture, and integrated static resources for an enhanced user experience.</div>
+      <div class="project-tech">
+        <span class="tag">Python</span><span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span><span class="tag">JavaScript</span><span class="tag">Django MVT architecture</span><span class="tag">Django ORM</span>
+      </div>
+      <a href="https://github.com/nethra2003/Restoran" class="project-link" target="_blank">View on GitHub →</a>
+    </div>
+
+     <div class="project-card">
+      <div class="project-num">08</div>
+      <div class="project-period">May 2026</div>
+      <div class="project-name">Diabetes Prediction System</div>
+      <div class="project-desc">The Diabetes Prediction System is a Machine Learning web application developed using the Flask framework. The system predicts whether a person is likely to have diabetes based on medical input parameters such as glucose level, blood pressure, BMI, insulin, age, and other health-related factors. The application uses a trained Machine Learning model to analyze the user inputs and provide prediction results through a simple and user-friendly web interface.</div>
+      <div class="project-tech">
+        <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Scikit-learn</span><span class="tag">Matplotlib</span><span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Seaborn</span><span class="tag">Kaggle</span>
+      </div>
+      <a href="https://github.com/nethra2003/ProjectDiabetes" class="project-link" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">09</div>
+      <div class="project-period">June 2026</div>
+      <div class="project-name">Studio Interior Design Website</div>
+      <div class="project-desc">Developed a responsive interior design studio website using Django, featuring services, projects, company history, and contact sections. Built reusable templates and integrated static assets using Python, HTML, CSS, and JavaScript.</div>
+      <div class="project-tech">
+        <span class="tag">Python</span><span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span><span class="tag">JavaScript</span><span class="tag">Django MVT architecture</span><span class="tag">Django ORM</span>
+      </div>
+      <a href="https://github.com/nethra2003/Restoran" class="project-link" target="_blank">View on GitHub →</a>
     </div>
 
   </div>
@@ -984,7 +1105,7 @@
     <div class="edu-card">
       <div class="edu-degree">B.E. — Computer Science & Engineering</div>
       <div class="edu-inst">Dr. Ambedkar Institute of Technology, Bangalore</div>
-      <div class="edu-detail">2022 – 2026 &nbsp;·&nbsp; CGPA: 8.99 / 10</div>
+      <div class="edu-detail">2022 – 2026 &nbsp;·&nbsp; CGPA: 9.08 / 10</div>
     </div>
     <div class="edu-card">
       <div class="edu-degree">Higher Secondary (Class XII) — PCMB</div>
@@ -1003,24 +1124,45 @@
   </div>
   <div class="certs-grid">
     <div class="cert-card">
-      <div class="cert-issuer">Adverk Technologies</div>
-      <div class="cert-name">Data Science Certification</div>
-      <div class="cert-year">2023</div>
-    </div>
+  <div class="cert-issuer">Adverk Technologies</div>
+  <div class="cert-name">Data Science Certification</div>
+  <div class="cert-year">2023</div>
+  <a href="Data Science.pdf"
+     target="_blank"
+     class="cert-link">
+    📄 View Certificate →
+  </a>
+</div>
+    
     <div class="cert-card">
       <div class="cert-issuer">NPTEL</div>
       <div class="cert-name">Cloud Computing Certification</div>
       <div class="cert-year">2025</div>
+      <a href="Cloud Computing.pdf"
+     target="_blank"
+     class="cert-link">
+    📄 View Certificate →
+  </a>
     </div>
     <div class="cert-card">
       <div class="cert-issuer">Oracle</div>
       <div class="cert-name">OCI AI Foundation Associate</div>
       <div class="cert-year">2025</div>
+      <a href="OCI Associate certification.pdf"
+     target="_blank"
+     class="cert-link">
+    📄 View Certificate →
+  </a>
     </div>
     <div class="cert-card">
       <div class="cert-issuer">Be10x</div>
-      <div class="cert-name">AI Tools and ChatGPT Workshop</div>
+      <div class="cert-name">Power BI Workshop</div>
       <div class="cert-year">2025</div>
+      <a href="PowerBI.pdf"
+     target="_blank"
+     class="cert-link">
+    📄 View Certificate →
+  </a>
     </div>
   </div>
 </section>
