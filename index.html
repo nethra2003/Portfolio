@@ -31,7 +31,6 @@
     overflow-x: hidden;
   }
 
-  /* Subtle grid overlay */
   body::before {
     content: '';
     position: fixed;
@@ -44,7 +43,6 @@
     z-index: 0;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -73,6 +71,7 @@
     display: flex;
     gap: 32px;
     list-style: none;
+    flex-wrap: wrap;
   }
 
   .nav-links a {
@@ -87,7 +86,25 @@
 
   .nav-links a:hover { color: var(--accent); }
 
-  /* HERO */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+  }
+
+  .nav-toggle span {
+    width: 22px;
+    height: 2px;
+    background: var(--accent);
+    display: block;
+    border-radius: 2px;
+  }
+
   #hero {
     position: relative;
     min-height: 100vh;
@@ -98,7 +115,6 @@
     overflow: hidden;
   }
 
-  /* Decorative gradient orb */
   #hero::after {
     content: '';
     position: absolute;
@@ -139,7 +155,7 @@
 
   .hero-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.5rem, 6.5vw, 6rem);
+    font-size: clamp(2.6rem, 6.5vw, 6rem);
     font-weight: 600;
     line-height: 0.95;
     letter-spacing: -2px;
@@ -225,7 +241,6 @@
 
   .btn-ghost:hover { border-color: var(--accent2); background: rgba(201,169,110,0.06); }
 
-  /* HERO VISUAL */
   .hero-card {
     opacity: 0;
     animation: fadeUp 0.8s 0.3s ease forwards;
@@ -307,7 +322,6 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* SECTIONS */
   section {
     position: relative;
     z-index: 1;
@@ -352,7 +366,6 @@
     margin: 0 auto;
   }
 
-  /* ABOUT */
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -391,7 +404,6 @@
   .info-label { font-size: 0.68rem; color: var(--accent2); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 3px; font-weight: 600; }
   .info-value { font-size: 0.88rem; color: var(--text); font-weight: 400; }
 
-  /* SKILLS */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -444,7 +456,6 @@
     color: var(--accent3);
   }
 
-  /* EXPERIENCE */
   .exp-timeline { position: relative; padding-left: 32px; }
 
   .exp-timeline::before {
@@ -511,7 +522,6 @@
   .exp-list li { color: var(--muted); font-size: 0.88rem; margin-bottom: 8px; line-height: 1.7; }
   .exp-list li::marker { color: var(--accent2); }
 
-  /* PROJECTS */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -577,7 +587,6 @@
 
   .project-link:hover { gap: 10px; }
 
-  /* EDUCATION */
   .edu-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -606,7 +615,6 @@
   .edu-inst { color: var(--accent2); font-size: 0.85rem; font-weight: 500; margin-bottom: 4px; }
   .edu-detail { font-size: 0.8rem; color: var(--muted); }
 
-  /* CERTS */
   .certs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -639,8 +647,20 @@
   .cert-issuer { font-size: 0.68rem; color: var(--accent2); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
   .cert-name { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.95rem; color: var(--text); line-height: 1.4; }
   .cert-year { font-size: 0.75rem; color: var(--light); font-weight: 500; }
+  .cert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--accent2);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 6px;
+    letter-spacing: 0.3px;
+    transition: gap 0.2s;
+  }
+  .cert-link:hover { gap: 9px; }
 
-  /* ACHIEVEMENTS */
   .achieve-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -657,7 +677,6 @@
 
   .achieve-text { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
 
-  /* CONTACT */
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -694,7 +713,6 @@
   .contact-label { color: var(--accent2); font-size: 0.68rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
   .contact-value { font-weight: 400; font-size: 0.85rem; color: var(--muted); }
 
-  /* INTERESTS */
   .interests-row {
     display: flex;
     flex-wrap: wrap;
@@ -713,7 +731,6 @@
     gap: 8px;
   }
 
-  /* FOOTER */
   footer {
     position: relative;
     z-index: 1;
@@ -725,14 +742,6 @@
   }
 
   footer span { color: var(--accent2); }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .about-grid, .contact-grid, .edu-grid, .achieve-grid { grid-template-columns: 1fr; }
-    .hero-bio { max-width: 100%; }
-    .hero-name { letter-spacing: -1px; }
-    .nav-links { display: none; }
-  }
 
   .section-title {
     position: relative;
@@ -762,27 +771,80 @@
     border-color: rgba(231,111,81,0.32);
   }
 
+  img { max-width: 100%; height: auto; }
 
-  @media (max-width: 560px) {
-    .hero-stats {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 7px;
-    }
-    .stat-box {
-      padding: 13px 5px;
-      min-height: 78px;
-    }
-    .stat-num {
-      font-size: 1.55rem;
-    }
-    .stat-label {
-      font-size: 0.56rem;
-      letter-spacing: 1px;
-    }
+  /* ============ RESPONSIVE ============ */
+
+  @media (max-width: 1024px) {
+    .hero-inner { grid-template-columns: 1fr 320px; gap: 50px; }
   }
-    .stat-box {
-      padding: 14px 8px;
+
+  @media (max-width: 900px) {
+    nav { padding: 18px 5vw; }
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+
+    .nav-links.open {
+      display: flex;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: rgba(255,248,241,0.98);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 5vw 18px;
     }
+    .nav-links.open a {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    #hero { padding: 110px 6vw 60px; min-height: unset; }
+
+    .hero-inner { grid-template-columns: 1fr; gap: 44px; }
+
+    .hero-card { order: -1; max-width: 280px; margin: 0 auto; }
+
+    .about-grid, .contact-grid, .edu-grid, .achieve-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-bio { max-width: 100%; }
+    .hero-name { letter-spacing: -1px; text-align: center; }
+    .hero-eyebrow { margin-left: auto; margin-right: auto; }
+    .hero-role { text-align: center; }
+    .hero-divider { margin-left: auto; margin-right: auto; }
+    .hero-ctas { justify-content: center; }
+
+    section { padding: 70px 6vw; }
+  }
+
+  @media (max-width: 640px) {
+    .hero-name { font-size: clamp(2.4rem, 11vw, 3.4rem); }
+
+    .skills-grid,
+    .projects-grid,
+    .certs-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .exp-timeline { padding-left: 26px; }
+    .exp-item::before { left: -30px; }
+    .exp-header { flex-direction: column; align-items: flex-start; }
+
+    section { padding: 56px 5vw; }
+    .section-header { margin-bottom: 34px; }
+
+    .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 7px; }
+    .stat-box { padding: 13px 5px; min-height: 78px; }
+    .stat-num { font-size: 1.55rem; }
+    .stat-label { font-size: 0.56rem; letter-spacing: 1px; }
+  }
+
+  @media (max-width: 400px) {
+    .nav-logo { font-size: 1.2rem; }
+    .btn-primary, .btn-ghost { padding: 11px 20px; font-size: 0.78rem; }
   }
 
 </style>
@@ -791,7 +853,7 @@
 
 <nav>
   <a class="nav-logo" href="#">Nethra<span>.</span></a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -800,6 +862,9 @@
     <li><a href="#certifications">Certs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <header id="hero">
@@ -829,7 +894,7 @@
           <div class="stat-label">Projects</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">3+</div>
+          <div class="stat-num">4+</div>
           <div class="stat-label">Certs</div>
         </div>
         <div class="stat-box">
@@ -928,19 +993,19 @@
       <div class="skill-icon">🧠</div>
       <div class="skill-name">Deep Learning</div>
       <div class="skill-desc">Developing neural network models for classification and prediction tasks using deep learning techniques and frameworks.</div>
-      <div class="tag-row"><span class="tag">Neural Networks</span><span class="tag">Tensorflow</span><span class="tag">CNN</span><span class="tag">Keras</span></div><span class="tag">PyTorch</span>
+      <div class="tag-row"><span class="tag">Neural Networks</span><span class="tag">Tensorflow</span><span class="tag">CNN</span><span class="tag">Keras</span><span class="tag">PyTorch</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">☁️</div>
       <div class="skill-name">Cloud & Tools</div>
       <div class="skill-desc">Deploying applications on AWS, VS Code, and Render with GitHub-based version control.</div>
-      <div class="tag-row"><span class="tag">VS Code</span><span class="tag">PyCharm</span><span class="tag">Jupyter Notebook</span><span class="tag">GitHub</span></div><span class="tag">Google Colab</span>
+      <div class="tag-row"><span class="tag">VS Code</span><span class="tag">PyCharm</span><span class="tag">Jupyter Notebook</span><span class="tag">GitHub</span><span class="tag">Google Colab</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">📐</div>
       <div class="skill-name">Core Concepts</div>
       <div class="skill-desc">Strong foundation in DSA, OOP, SDLC, AIML, DBMS, and Computer Networks.</div>
-      <div class="tag-row"><span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">DBMS</span><span class="tag">CLoud Computing</span><span class="tag">Computer Networks</span></div>
+      <div class="tag-row"><span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">DBMS</span><span class="tag">Cloud Computing</span><span class="tag">Computer Networks</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🤝</div>
@@ -965,7 +1030,7 @@
         <div class="exp-header">
           <div>
             <div class="exp-title">Python Full Stack & Data Science Trainee</div>
-            <div class="exp-company">Palle Technologies · Bangalore</div>
+            <div class="exp-company">Palle Technologies · Bangaluru</div>
           </div>
           <span class="exp-date">Jan 2026 – June 2026</span>
         </div>
@@ -1031,7 +1096,7 @@
       <div class="project-name">Genomic Data Analysis Platform for Pharmacogenomics</div>
       <div class="project-desc">Data-intensive platform for pharmacogenomics using ANNOVAR and VEP for genomic variant annotation. Applied XGBoost and FT-Transformer for drug-response prediction — XGBoost achieved higher precision, built with React.js, Node.js, and PostgreSQL.</div>
       <div class="project-tech">
-        <span class="tag">Python</span><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">XGBoost</span><span class="tag">FT Transformer</span><span class="tag">VEP</span><span class="tag">ANNOVAR</span><span class="tag">PostgreSQL</span>
+        <span class="tag">Python</span><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">XGBoost</span><span class="tag">FT Transformer</span><span class="tag">VEP</span><span class="tag">ANNOVAR</span>
       </div>
       <a href="https://github.com/nethra2003/Genomic-Data-Analysis-Platform-for-Pharmacogenomics-" class="project-link" target="_blank">View on GitHub →</a>
     </div>
@@ -1040,7 +1105,7 @@
       <div class="project-num">05</div>
       <div class="project-period">Jan 2026</div>
       <div class="project-name">AI HR Assistant Agent</div>
-      <div class="project-desc">This is an AI-powered HR Assistant that answers employee queries related to Leave policies, Salary & payroll, HR rules & procedures, Attendance & timings, Benefits & insurance, Training & developmentIt uses FastAPI backend, a modern UI frontend, and OpenAI for intelligent responses.</div>
+      <div class="project-desc">This is an AI-powered HR Assistant that answers employee queries related to Leave policies, Salary & payroll, HR rules & procedures, Attendance & timings, Benefits & insurance, Training & development. It uses FastAPI backend, a modern UI frontend, and OpenAI for intelligent responses.</div>
       <div class="project-tech">
         <span class="tag">FastAPI</span><span class="tag">OpenAI</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span><span class="tag">Vector Store</span>
       </div>
@@ -1124,46 +1189,47 @@
   </div>
   <div class="certs-grid">
     <div class="cert-card">
-  <div class="cert-issuer">Adverk Technologies</div>
-  <div class="cert-name">Data Science Certification</div>
-  <div class="cert-year">2023</div>
-  <a href="Data Science.pdf"
-     target="_blank"
-     class="cert-link">
-    📄 View Certificate →
-  </a>
-</div>
-    
+      <div class="cert-issuer">Adverk Technologies</div>
+      <div class="cert-name">Data Science Certification</div>
+      <div class="cert-year">2023</div>
+      <a href="Data Science.pdf" target="_blank" class="cert-link">📄 View Certificate →</a>
+    </div>
+
     <div class="cert-card">
       <div class="cert-issuer">NPTEL</div>
       <div class="cert-name">Cloud Computing Certification</div>
       <div class="cert-year">2025</div>
-      <a href="Cloud Computing.pdf"
-     target="_blank"
-     class="cert-link">
-    📄 View Certificate →
-  </a>
+      <a href="Cloud Computing.pdf" target="_blank" class="cert-link">📄 View Certificate →</a>
     </div>
+
     <div class="cert-card">
       <div class="cert-issuer">Oracle</div>
       <div class="cert-name">OCI AI Foundation Associate</div>
       <div class="cert-year">2025</div>
-      <a href="OCI Associate certification.pdf"
-     target="_blank"
-     class="cert-link">
-    📄 View Certificate →
-  </a>
+      <a href="OCI Associate certification.pdf" target="_blank" class="cert-link">📄 View Certificate →</a>
     </div>
+
     <div class="cert-card">
       <div class="cert-issuer">Be10x</div>
       <div class="cert-name">Power BI Workshop</div>
       <div class="cert-year">2025</div>
-      <a href="PowerBI.pdf"
-     target="_blank"
-     class="cert-link">
-    📄 View Certificate →
-  </a>
+      <a href="PowerBI.pdf" target="_blank" class="cert-link">📄 View Certificate →</a>
     </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer">NxtWave</div>
+      <div class="cert-name">Generative AI (GenAI) Certification</div>
+      <div class="cert-year">2024</div>
+      <a href="Gen AI.pdf" target="_blank" class="cert-link">📄 View Certificate →</a>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer">Be10x</div>
+      <div class="cert-name">AI Tools Workshop</div>
+      <div class="cert-year">2025</div>
+      <a href="AI Tololspdf.pdf" target="_blank" class="cert-link">📄 View Certificate →</a>
+    </div>
+
   </div>
 </section>
 
@@ -1180,6 +1246,10 @@
     </div>
     <div class="achieve-card">
       <div class="achieve-text">🎓 Cleared the <strong style="color:var(--accent)">Sadhana Examination</strong> conducted by RSS Foundation, receiving sponsorship for PU education — a recognition of academic excellence.</div>
+    </div>
+    <div class="achieve-card">
+      <div class="achieve-text">💼 <strong style="color:var(--accent)">Certificate of Merit</strong> for participating in Naukri Campus Young Turks 2025, India's largest skill contest .</div>
+      <a href="youngturks.pdf" target="_blank" class="cert-link">📄 View Certificate →</a>
     </div>
   </div>
 </section>
@@ -1235,6 +1305,23 @@
 <footer>
   © 2026 Nethra G Habib  <span>nethrahabib33@gmail.com</span>
 </footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
 
 </body>
 </html>
